@@ -1,0 +1,171 @@
+* {
+    max-width: 1024px;
+    width: 95%;
+    text-align:center;
+}
+/*
+Base rules
+*/
+.wage{
+    visibility: hidden;
+}
+/*
+Hides the wages by default
+*/
+.center {
+    margin:auto;
+    background:pink;
+}
+/*
+Centers objects, and makes their background pink.
+*/
+hr {
+    width:100%;
+    background-color:purple;
+}
+/*
+Make hr full width and changes colour  to purple
+*/
+ul {
+    list-style-type:none;
+}
+/*
+removes . from ul list items.
+*/
+li{
+    font-size:larger;
+    margin-top:1em;
+}
+/*
+makes list items larger and increases top margin.
+*/
+.mycard {
+    margin:auto;
+    margin-top:5em;
+    box-shadow: 0 8px 16px rgba(83, 82, 82, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    padding:2em;
+  }
+  /*
+rounded card with shadows
+  */
+.mycard2{
+    margin:auto;
+    margin-top:5em;
+    border-radius: 10px;
+}
+/*
+flat card without shadows
+*/
+.mycard3{
+    margin:auto;
+    margin-top:5em;
+    box-shadow: 0 8px 16px rgba(83, 82, 82, 0.2);
+    transition: 0.3s;
+    padding:2em;
+}
+/*
+flat card with shadows
+*/
+
+.information{
+    text-align:left;
+    display:flex;
+}
+/*
+Flexbox with left aligned text.
+*/
+.left{
+    text-align:left;
+    justify-self:flex-start;    
+}
+/*
+Left Align
+*/
+.right{
+    text-align:left;
+    justify-self:flex-end;
+}
+/*
+Right Align
+*/
+.thirty{
+    width:30%;
+    padding: 10px;
+}
+/*
+reduces width to 30% and adds padding.
+*/
+.about{
+    margin-left:5%;
+    margin-right:5%;
+    display: flex;
+    flex-direction:row;
+}
+/*
+flexbox with 5% margins
+*/
+.buttons{
+    display:flex;
+    flex-direction: row;
+    background:pink;
+    justify-content:center;
+}
+/*
+Flexbox for buttons, used within main card.
+*/
+.btn{
+    background-color:#007bff;
+}
+/*
+Resets submit btn colour to default.
+*/
+.button{
+    background:lightskyblue;
+}
+/*
+sets background colour for the two main buttons to lightblue
+*/
+    .educationLeft{
+        background:plum;
+        flex-grow:2;
+    }
+    /*
+    sets colour to plum and makes it larger than the other part
+    */
+    .educationRight{
+        flex:60%;
+        background:lightgray;
+    }
+    /*
+    sets colour to lightgray and makes it smaller than the other part.
+    */
+
+/*
+The specs say for a device with <400 pixels but my phone has more pixels so its
+setup this way for testing, hopefully I don't forget to change back when submitting.
+*/
+/*
+Changes for a mobile phone, mostly making rows into columns but also makes the radio buttons large so that they can be clicked.
+*/
+@media (max-width:400px){
+    .about{
+        flex-direction:column;
+    }
+    .buttons{
+        flex-direction:column;
+        margin-left:3%
+    }
+    .left{
+        text-align:center;
+    }
+    .right{
+        flex:100%;
+    }
+    input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 2em;
+}
+}
